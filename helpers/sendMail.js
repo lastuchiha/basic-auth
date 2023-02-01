@@ -4,8 +4,7 @@ import { config } from "dotenv";
 config();
 function sendMail(url, email) {
   var transporter = nodemailer.createTransport({
-    host: 'sandbox.smtp.mailtrap.io',
-    port: 2525,
+    service: 'gmail',
     auth: {
       user: process.env.USER,
       pass: process.env.PASSWORD
